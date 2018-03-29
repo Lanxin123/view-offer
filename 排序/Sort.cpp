@@ -67,3 +67,50 @@ void BubbleSort(int r[], int n)
 }
 
 
+//插入排序
+void InsertSort(int k[], int n)
+{
+	int i, j, temp;
+	
+	for (i = 1;i<n;++i)
+	{
+		if (k[i]<k[i-1])
+		{
+			temp = k[i];
+
+			for (j = i-1;k[j]>temp;j--)
+			{
+				k[j + 1] = k[j];
+			}
+			k[j + 1] = temp;
+		}
+	}
+}
+
+//希尔排序
+void ShellSort(int k[], int n)
+{
+	int i, j, temp;
+	int gap = n;
+
+	do 
+	{
+		gap = gap / 3 + 1;
+
+		for (i =  gap;i<n;i++)
+		{
+			if (k[i]<k[i-gap])
+			{
+				temp = k[i];
+
+				for (j = i-gap;k[j]>temp;j-=gap)
+				{
+					k[j + 1] = k[j];
+				}
+				k[j + 1] = temp;
+			}
+		}
+	} while (gap>1);
+}
+
+
