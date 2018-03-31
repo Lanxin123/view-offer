@@ -122,7 +122,7 @@ void SelectSort(int r[ ], int n)
 	int j;
 	int index;
 	int temp;
-    for (i=0; i<n-1; i++)  	            //对n个记录进行n-1趟简单选择排序
+    for (i=0; i<n; i++)  	            //对n个记录进行n-1趟简单选择排序
 	{  
        index=i; 		
        for (j=i+1; j<n; j++)            //在无序区中选取最小记录
